@@ -63,7 +63,7 @@ class FlutterBluetoothPrinter {
       srcHeight: imageHeight,
     );
 
-    img.Image src = img.decodeJpg(bytes)!;
+    img.Image src = img.decodeJpg(bytes as Uint8List)!;
 
     final profile = await CapabilityProfile.load();
     final generator = Generator(
@@ -127,39 +127,49 @@ class FlutterBluetoothPrinter {
     final height = arg['height'] as int;
     final paperSize = arg['paperSize'] as PaperSize;
 
-    img.Image src = img.Image.fromBytes(width, height, srcBytes);
+    img.Image src = img.Image.fromBytes(width: width, height: height,bytes: (srcBytes as Uint8List).buffer,);
+    final data = src.getBytes();
     final w = src.width;
     final h = src.height;
 
-    src = img.smooth(src, 1.5);
-    final res = img.Image(w, h);
+    src = img.smooth(src,weight:  1.5, );
+    final res = img.Image(width: w,height: h);
+
+    var color = 0;
+    for (var x = 0; x < data.length; x += 4) {
+      final int r = data[x];
+      final int g = data[x + 1];
+      final int b = data[x + 2];
+      final int avg = ((r + g + b) / 3).floor();
+      color += avg;
+    }
+
     for (int y = 0; y < h; ++y) {
       for (int x = 0; x < w; ++x) {
         final idx = y * w + x;
 
-        final pixel = src[idx];
-        final r = img.getRed(pixel);
-        final b = img.getBlue(pixel);
-        final g = img.getGreen(pixel);
+        final pixel = src.toUint8List()[idx];
+        final r = img.uint32ToRed(pixel);
+        final b = img.uint32ToBlue(pixel);
+        final g = img.uint32ToGreen(pixel);
 
         int c;
         final l = img.getLuminanceRgb(r, g, b) / 255;
         if (l > 0.8) {
-          c = img.getColor(255, 255, 255);
+          c = img.rgbaToUint32(255, 255, 255, 255);
         } else {
-          c = img.getColor(0, 0, 0);
+          c = img.rgbaToUint32(0, 0, 0, 255);
         }
 
         final u = BigInt.from(c).toUnsigned(32);
-        res[idx] = u.toInt();
+        res.toUint8List()[idx] = u.toInt();
       }
     }
 
     src = res;
     src = img.pixelate(
       src,
-      (src.width / paperSize.width).round(),
-      mode: img.PixelateMode.average,
+      mode: img.PixelateMode.average, size: (src.width / paperSize.width).round(),
     );
 
     final dotsPerLine = paperSize.width;

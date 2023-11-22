@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b906bc2b-55fc-4070-a11a-c6b1d2d31f31" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/melos_flutter_bluetooth_printer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/melos_flutter_bluetooth_printer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/flutter_bluetooth_printer/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/flutter_bluetooth_printer/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/flutter_bluetooth_printer/lib/src/flutter_bluetooth_printer_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/flutter_bluetooth_printer/lib/src/flutter_bluetooth_printer_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/flutter_bluetooth_printer/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/flutter_bluetooth_printer/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/flutter_bluetooth_printer/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/flutter_bluetooth_printer/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2YWm4ouwYpK8nxTNjGBCXR9fIq4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "settings.editor.selected.configurable": "flutter.settings",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="RunManager" selected="Flutter.Flutter Run -&gt; 'flutter_bluetooth_printer_example'" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b906bc2b-55fc-4070-a11a-c6b1d2d31f31" name="Changes" comment="" />
+      <created>1700649520451</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700649520451</updated>
+    </task>
+    <servers />
+  </component>
+</project>
